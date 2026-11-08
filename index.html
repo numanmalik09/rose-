@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌹 Rose Blooming from Code</title>
+    <meta name="description" content="A single div transforms into a beautiful blooming 3D rose.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@500;700&family=Fira+Code:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="vignette"></div>
+    <canvas id="fxCanvas" class="fx-canvas"></canvas>
+
+    <button class="music-toggle" id="musicToggle" aria-label="Toggle Romantic Music" title="Play / Pause Music">
+        <span class="music-icon" id="musicIcon">🎵</span>
+    </button>
+    <div class="ambient-light" id="ambientLight"></div>
+
+    <div class="trigger-overlay" id="triggerOverlay">
+        <div class="glass-card">
+            <div class="card-glow"></div>
+            <div class="rose-icon">🌹</div>
+            <h2 class="title">Love.css</h2>
+            <div class="loading-bar-container">
+                <div class="loading-bar" id="loadingBar"></div>
+            </div>
+            <p class="status-text" id="statusText">Ready to compile...</p>
+            <button class="start-button" id="startButton" disabled>
+                <span class="btn-text">Tap to Bloom</span>
+                <span class="btn-shine"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="scene">
+        <div class="rose-wrapper" id="roseWrapper">
+            <div class="stem-group">
+                <div class="stem" id="stem">
+                    <div class="stem-highlight"></div>
+                </div>
+                <div class="thorn thorn-1" id="thorn1"></div>
+                <div class="thorn thorn-2" id="thorn2"></div>
+                <div class="leaf leaf-left" id="leafLeft">
+                    <div class="leaf-vein"></div>
+                </div>
+                <div class="leaf leaf-right" id="leafRight">
+                    <div class="leaf-vein"></div>
+                </div>
+            </div>
+
+            <div class="calyx" id="calyx"></div>
+
+            <div class="rose-head" id="roseHead">
+                <div class="rose-glow"></div>
+                <div class="rose-glow-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="end-text" id="endText">
+        <div class="tagline-card">
+            <p class="tagline" id="tagline">“I coded you a rose, because a real one fades, but this one will bloom forever.”</p>
+            <p class="tagline-sub">Just like my feelings for you. Will you be mine? forever and ever <span class="rose-emoji">🌹</span></p>
+
+            <div class="proposal-actions" id="proposalActions">
+                <button class="proposal-btn btn-yes" id="btnYes">
+                    <span class="btn-heart">💖</span> Yes, Forever!
+                </button>
+                <button class="proposal-btn btn-always" id="btnAlways">
+                    <span class="btn-heart">🌹</span> Always & Forever
+                </button>
+            </div>
+
+            <div class="proposal-footer">
+                <button class="replay-btn" id="replayBtn" title="Replay blooming animation">
+                    <span>↺ Replay Bloom</span>
+                </button>
+                <span class="hint-text">💡 Drag rose to rotate in 3D</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="love-modal-overlay" id="loveModalOverlay">
+        <div class="love-modal">
+            <div class="modal-hearts">💖 ✨ 🌹</div>
+            <h3 class="modal-title">You made my heart bloom!</h3>
+            <p class="modal-message">“This rose was coded with love, and it will bloom for you forever and always.”</p>
+            <button class="modal-close-btn" id="modalCloseBtn">Admire Our Rose 🌹</button>
+        </div>
+    </div>
+
+    <div id="fallingPetals"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
